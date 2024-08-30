@@ -60,7 +60,7 @@ export default class SynonymPlugin extends Plugin {
     const prompt = `Provide synonyms for the word "${word}". Respond ONLY with a JSON object in the following exact format, and nothing else:
     {
       "word": "${word}",
-      "synonyms": ["synonym1", "synonym2", "synonym3"]
+      "synonyms": ["synonym1", "synonym2", "synonym3", ...]
     }
     Ensure the response is valid JSON. Do not include any explanations or additional text.`;
 
