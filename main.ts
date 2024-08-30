@@ -57,10 +57,10 @@ export default class SynonymPlugin extends Plugin {
   async getSynonyms(word: string): Promise<string[] | string> {
     const ollamaUrl = 'http://localhost:11434/api/generate';
 
-    const prompt = `Provide synonyms for the word "${word}". Respond ONLY with a JSON object in the following exact format, and nothing else:
+    const prompt = `The context of this conversation will be victorian era fantasy. I will be asking for your help for synonyms, similar phrases, names, ways to describe. You give me synonyms or similar phrases for that.Provide synonyms/similar phrases for the word(s) "${word}". Respond ONLY with a JSON object in the following exact format, and nothing else:
     {
       "word": "${word}",
-      "synonyms": ["synonym1", "synonym2", "synonym3", ...]
+      "synonyms": ["synonym1/similar-phrase1", "synonym2/similar-phrase2", "synonym3/similar-phrase3", ...]
     }
     Ensure the response is valid JSON. Do not include any explanations or additional text.`;
 
